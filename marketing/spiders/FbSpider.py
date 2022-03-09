@@ -20,6 +20,7 @@ class FbspiderSpider(scrapy.Spider):
         url = "https://wwww.facebook.com"
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_experimental_option("detach", True)
+        chrome_options.headless = False
        
         chrome = webdriver.Chrome(ChromeDriverManager().install(),chrome_options=chrome_options)
         chrome.get(url)
